@@ -1,0 +1,60 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    margin-top: 10vh;
+}
+.section{
+    width: 90%;
+    height: 80vh;
+    margin: 0 auto;
+}
+
+.title{
+    text-transform: uppercase;
+    font-size: 20px;
+    text-align: center;
+    padding: 20px;
+}
+.container{
+    margin: 0 auto;
+    width: 100%;
+}
+.drum{
+    display: inline-block;
+    width: 150px;
+    height: 150px;
+    text-align: center;
+    margin-right: 20px;
+    border: 1px solid lightgrey;
+    margin-bottom: 20px;
+    font-size: 100px;
+}
+.pressed{
+    box-shadow: 15px 15px 15px 5px lightgrey;
+}
+.a{
+    background: url('./img/tom1.png');
+}
+.b{
+    background: url('./img/tom2.png');
+}
+.c{
+    background: url('./img/tom3.png');
+}
+.d{
+    background: url('./img/snare.png');
+}
+.e{
+    background: url('./img/tom4.png');
+}
+.f{
+    background: url('./img/crash.png');
+}
+.g{
+    background: url('./img/kick.png');
+    object-fit: contain;
+}
