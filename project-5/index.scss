@@ -16,10 +16,8 @@ body{
         border-radius: 50%;
         z-index:2000;
         box-shadow:  0 10px 30px rgba(black, .1);
-        display:flex;
-        justify-content: center;
-        align-items: center;
-        font-size:30px;
+        text-align: center;
+        cursor: pointer;
     }
 
     &__background{
@@ -92,5 +90,58 @@ body{
     &__checkbox:checked ~ &__nav{
         opacity:1;
         width:100%;
+    }
+
+    //ICON
+    &__icon{
+        position:relative;
+        margin-top:35px;
+        &,
+        &::before,
+        &::after{
+            width:30px;
+            height:2px;
+            background-color: black;
+            display: inline-block;
+        }
+
+        &::before,
+        &::after{
+            content: '';
+            position:absolute;
+            left:0;
+            transition:all .2s;
+        }
+
+        &::before{
+            top:-8px;
+        }
+
+        &::after{
+            top:8px;
+        }
+    }
+
+    &__button:hover &__icon::before{
+        top:-10px;
+    }
+
+    &__button:hover &__icon::after{
+        top:10px;
+    }
+
+    &__checkbox:checked + &__button &__icon{
+        background-color: transparent;
+    }
+
+    
+    &__checkbox:checked + &__button &__icon::before{
+        top:0;
+        transform: rotate(135deg);
+    }
+
+    &__checkbox:checked + &__button &__icon::after{
+        top:0;
+        transform: rotate(-135deg);
     }
 }
